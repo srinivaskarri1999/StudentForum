@@ -1,0 +1,305 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('background_violet.jpg');
+    background-position: initial;
+}
+
+.background{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: -1;
+  background-repeat: no-repeat;
+}
+
+.navimage{
+    width: 20px;
+    height: 20px;
+}
+
+
+.mainheading{
+
+  color:white;
+  font-size: 36px;
+  font-family: "Varela Round";
+  margin-top: 70px;
+  margin-left: 150px;
+  font-weight: bold;
+  position: absolute;
+
+}
+
+ul {
+  position: absolute;
+    list-style-type: none;
+    margin-top: 50px;
+    margin-left: 30px;
+    padding: 0;
+    padding-top: 10px;
+    width: 50px;
+    height: 600px;
+    border-radius: 24px;
+    -moz-border-radius: 24px;
+    -webkit-border-radius: 24px;
+    background-color: #21033B;
+  }
+  
+ ul li img {
+    display: block;
+    color: white;
+    
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+
+ ul li img:hover {
+    background-color:#55396D;
+    color: white;
+    display: block;
+
+  }
+
+  li a {
+    display: block;
+    color: white;
+    margin-top: 8px;
+    margin-left: 8px;
+  }
+
+  li a:hover {
+    background-color: #555;
+    color: white;
+  }
+
+
+  .complaintcard{
+
+    width: 500px;
+    height: 90%;
+    margin-top: 30px;
+    margin-right: 30px;
+    position: absolute;
+    right: 0;
+
+  }
+
+
+  .maincardcontainer {
+    padding: 2px 16px;
+  }
+
+  .ccardhead{
+    color: black;
+    font-size: 40px;
+    margin-bottom: 4px;
+    text-align: start;
+    margin-left: 50px;
+    font-family: "Varela Round";
+    font-weight: 500;
+  }
+
+  .complaintcard:hover .ccardhead{
+    color: #FFD800;
+  }
+
+  .complaintcard:hover .dropdown{
+    background-color: #6A4C96;
+    color: white;
+    border-color: #6A4C96;
+  }
+
+  .complaintcard:hover .dropdown-select{
+    background-color: #6A4C96;
+    color: white;
+    border-color: #6A4C96;
+  }
+
+  .ccardpara{
+    color: black;
+    font-size: 12px;
+    margin-bottom: 4px;
+    text-align: start;
+    margin-left: 50px;
+    font-family: "Varela Round";
+  }
+
+  .ccardtitle{
+    border:0;
+    font-family: "Varela Round";
+    font-size: 16px;
+    background-color: white;
+    display: block;
+    margin-top: 40px;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #6A4C96;
+    width: 400px;
+    height: 42px;
+    outline: none;
+    color: black;
+    border-radius: 8px;
+  }
+  
+
+  .ccardmsg{
+    border:0;
+    font-family: "Varela Round";
+    font-size: 16px;
+    background-color: white;
+    display: block;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding: 8px;
+    text-align: start;
+    border: 1px solid #6A4C96;
+    width: 400px;
+    height: 300px;
+    outline: none;
+    color: black;
+    border-radius: 8px;
+  }
+
+
+  .ccardbtn{
+  border:0;
+  font-family: "Varela Round";
+  font-size: 16px;
+  background: white;
+  display: block;
+  margin: 20px auto;
+  position: absolute;
+  margin-right: 28px;
+  right: 0;
+  text-align: center;
+  border: 2px solid #6A4C96;
+  padding: 14px 40px;
+  outline: none;
+  color: black;
+  border-radius: 12px;
+  cursor: pointer;
+  }
+
+  .box input[type = "submit"]:hover{
+    background: #6A4C96;
+    color: white;
+  }
+
+  .container {
+    width: 200px;
+    margin-left: 20px;
+    margin: 0px;
+    text-align: center;
+  }
+  
+  .container > .dropdown {
+    margin: 0 20px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left: 35px;
+    vertical-align: top;
+  }
+  
+  .dropdown {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    height: 28px;
+    width: 150px;
+    color: black;
+    font-family: "Varela Round";
+    background: white;
+    border: 1px solid;
+    border-color: #6A4C96;
+    border-radius: 8px;
+  }
+  
+  .dropdown:before, .dropdown:after {
+    position: absolute;
+    z-index: 2;
+    top: 9px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border: 1px dashed;
+    pointer-events: none;
+  }
+  
+  .dropdown:before {
+    border-bottom-style: solid;
+    border-top: none;
+  }
+  
+  .dropdown:after {
+    margin-top: 7px;
+    border-top-style: solid;
+    border-bottom: none;
+  }
+  
+  .dropdown-select {
+    position: relative;
+    margin: 0;
+    padding: 6px 8px 6px 10px;
+    height: 28px;
+    font-family: "Varela Round";
+    line-height: 14px;
+    font-size: 12px;
+    color:black;
+    background: white;
+    border: 0;
+    border-radius: 0;
+    -webkit-appearance: none;
+  }
+  
+  .dropdown-select:focus {
+    z-index: 3;
+    width: 100%;
+    color: black;
+    outline: 0px solid #6A4C96;
+ 
+  }
+  
+  .dropdown-select > option {
+    margin: 3px;
+    padding: 6px 8px;
+    font-family: "Varela Round";
+    color: black;
+    text-shadow: none;
+    background: white;
+    border: #6A4C96 solid;
+    outline: 1px solid #6A4C96;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  /* Fix for IE 8 putting the arrows behind the select element. */
+  
+  .lt-ie9 .dropdown {
+    z-index: 1;
+  }
+  
+  .lt-ie9 .dropdown-select {
+    z-index: -1;
+  }
+  
+  .lt-ie9 .dropdown-select:focus {
+    z-index: 3;
+  }
+  
+  /* Dirty fix for Firefox adding padding where it shouldn't. */
+  
+  @-moz-document url-prefix() {
+    .dropdown-select {
+      padding-left: 6px;
+    }
+  }
+  
+  

@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow-y: scroll;
+  font-family: sans-serif;
+  background-image: url('../img/blog/background_violet.jpg');
+  background-position: initial;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+  height: 0px;
+}
+
+h2 {
+  color: white;
+  font-size: 50px;
+  font-family: 'Varela Round';
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+}
+
+.heading1 {
+  color: white;
+  padding-left: 10%;
+  position: absolute;
+  bottom: 8px;
+  width: 60%;
+  font-weight: 500;
+  text-align: center;
+}
+
+.para {
+  color: white;
+  font-family: 'Varela Round';
+  font-size: 15px;
+  padding-left: 10%;
+  position: absolute;
+  bottom: 10%;
+  width: 60%;
+  text-align: center;
+}
+
+.image {
+  width: 60%;
+  height: 60%;
+  margin-top: 10%;
+  margin-left: 10%;
+  position: absolute;
+}
+
+/* slider {
+
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+slider > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  animation: slide 12s infinite;
+  overflow: hidden;
+}
+
+slide:nth-child(1){
+  left: 0%;
+  animation-delay: -1s;
+  background-image: url(1.png);
+  background-size: cover;
+}
+
+slide:nth-child(2){
+  animation-delay: 2s;
+  background-image: url(1.png);
+  background-size: cover;
+}
+
+slide:nth-child(3){
+  animation-delay: 5s;
+  background-image: url(1.png);
+  background-size: cover;
+}
+
+@keyframes slide {
+  0% { left: 100%; width: auto;}
+  5% { left: 0%;}
+  25% { left: 0%;}
+  30% { left: -100%; width: auto;}
+  30.0001% { left: -100%; width: 0%;}
+  100% { left: 100%; width: 0%;}
+} */
+
+.slideshow-container {
+  width: 80%;
+  height: 80%;
+  position: absolute;
+}
+
+.mySlides {
+  display: none;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.box {
+  width: 500px;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  /* transform: translate(-50%,-50%); */
+  text-align: center;
+}
+.box h1 {
+  color: black;
+  font-size: 40px;
+  margin-bottom: 4px;
+  text-align: start;
+  margin-left: 150px;
+  font-family: 'Varela Round';
+  font-weight: 500;
+}
+.box p {
+  color: #666666;
+  font-size: 12px;
+  margin-top: auto;
+  text-align: start;
+  margin-left: 150px;
+  margin-bottom: 20%;
+  font-family: sans-serif;
+}
+.box input[type='text'],
+.box input[type='password'] {
+  border: 0;
+  background-color: white;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #6a4c96;
+  padding: 14px 10px;
+  width: 200px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+}
+.box input[type='text']:focus,
+.box input[type='password']:focus {
+  width: 280px;
+  border-color: #6a4c96;
+}
+.box input[type='submit'] {
+  border: 0;
+  background: white;
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+  border: 2px solid #6a4c96;
+  padding: 14px 40px;
+  outline: none;
+  color: black;
+  border-radius: 24px;
+  transition: 0.25s;
+  cursor: pointer;
+}
+.box input[type='submit']:hover {
+  background: #6a4c96;
+  color: white;
+}
