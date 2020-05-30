@@ -15,38 +15,25 @@ const router = express.Router();
 // TODO after implementing comments edit below line
 // router.use('/:tourId/reviews', reviewRouter);
 
+// login is required to access
+router.use(authController.protect);
+
 router
   .route('/')
   .get(blogController.getAllBlogs)
-  .post(authController.protect, blogController.createBlog);
+  .post(blogController.createBlog);
 
 router.route('/article').get(blogController.getArticle);
 router.route('/complaint').get(blogController.getComplaint);
 router
   .route('/mypost/:id')
-  .post(
-    authController.protect,
-    authController.checkUser(Blog),
-    blogController.updateMyBlog
-  )
-  .delete(
-    authController.protect,
-    authController.checkUser(Blog),
-    blogController.deleteBlog
-  );
+  .post(authController.checkUser(Blog), blogController.updateMyBlog)
+  .delete(authController.checkUser(Blog), blogController.deleteBlog);
 
 router
   .route('/:id')
   .get(blogController.getBlog)
-  .patch(
-    authController.protect,
-    authController.restrictTo('admin'),
-    blogController.updateBlog
-  )
-  .delete(
-    authController.protect,
-    authController.restrictTo('admin'),
-    blogController.deleteBlog
-  );
+  .patch(authController.restrictTo('admin'), blogController.updateBlog)
+  .delete(authController.restrictTo('admin'), blogController.deleteBlog);
 
 module.exports = router;

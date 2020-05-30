@@ -8,35 +8,21 @@ const Comment = require('../models/commentModel');
 
 const router = express.Router();
 
+router.use(authController.protect);
+
 router
   .route('/mycomment/:id')
-  .patch(
-    authController.protect,
-    authController.checkUser(Comment),
-    commentController.updateMyComment
-  );
+  .patch(authController.checkUser(Comment), commentController.updateMyComment);
 
 router
   .route('/')
   .get(commentController.getAllComments)
-  .post(
-    authController.protect,
-    blogController.checkBlogStatus,
-    commentController.createComment
-  );
+  .post(blogController.checkBlogStatus, commentController.createComment);
 
 router
   .route('/:id')
   .get(commentController.getComments)
-  .patch(
-    authController.protect,
-    authController.restrictTo('admin'),
-    commentController.updateComment
-  )
-  .delete(
-    authController.protect,
-    authController.restrictTo('admin'),
-    commentController.deleteComment
-  );
+  .patch(authController.restrictTo('admin'), commentController.updateComment)
+  .delete(authController.restrictTo('admin'), commentController.deleteComment);
 
 module.exports = router;

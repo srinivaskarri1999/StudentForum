@@ -1,0 +1,15 @@
+extends slrbase
+
+block content
+  form.box.signup-box
+    h1 Register
+    p Sign up with your collage id to get started
+    input#name(type="text" name="" placeholder="Username")
+    input#email(type="text" name="" placeholder="Email ID")
+    input#password(type="password" name="" placeholder="Password")
+    input#password-confirm(type="password" name="" placeholder="Confirm Password")
+    input(type="submit" name="" value="Sign Up")
+    p(style="color: black; margin-top: 10px; cursor: pointer;")
+      | Already have an account? 
+      b(style="color: #6A4C96;")
+        a(href="/") Login to get started

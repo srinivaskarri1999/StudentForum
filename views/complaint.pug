@@ -1,0 +1,70 @@
+doctype html
+
+include _navbar
+include _showPC
+
+mixin showPosts(post)
+  .eachcompcard
+    p.complaintcardname=`${post.user.name.split(' ')[0]} ${post.user.rollNumber}`
+    p.complaintcardmsg=`${post.title} ${post.tags}`
+    p.complaintcardmsg=`${post.text}`
+    a(href=`/complaint/${post.slug}`)
+      button.morebtn more
+
+html(lang="en" dir="ltr")
+  head
+    meta(charset="utf-8")
+    title &#x64E; #{title} | Student Forum
+    link(rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round")
+    link(rel="stylesheet" href="/css/complaint_style.css")
+  body
+    h1.mainheading Complaints
+    ul.navbar
+      +navbar()
+    .complaintcard
+      .maincardcontainer
+        form.box.complaint-form
+          h1.ccardhead Post
+          p.ccardpara Have a complaint? post it here
+          input#complaintTitle.ccardtitle(type="text" name="" placeholder="Title")
+          section.container
+            .dropdown
+              select#tagDropdown.dropdown-select(name="one")
+                option(value="") Select&mldr;
+                option(value="1") Academics
+                option(value="2") Library
+                option(value="3") Hostel
+                option(value="4") Canteen
+                option(value="5") Other
+          textarea#complaintText.ccardmsg(rows="10" cols="70" placeholder="Context")
+          input.ccardbtn(type="submit" name="" value="Post")
+    
+    .complaintcards
+      .compcard
+        each post in posts
+          +showPosts(post)
+    
+    - if(post)
+      #myModalComplaint.modal
+        .modal-content
+          span.close.closebtn &times;
+          .eleblogcard
+            p.eleblogcardname=`${post.user.name.split(' ')[0]} ${post.user.rollNumber}`
+            p.eleblogcardname=`${post.title} ${post.tags}`
+            p.eleblogcardmsg=`${post.text}`
+          div
+            h4(style="margin: 0px; color: lightgray; margin-top: 4px; margin-left: 60px; font-size: 14px; font-family: sans-serif; color: black; float: left; ")=`${post.upvotes}`
+            button#upvotebtn.upvotebtn(data-postid=`${post.id}` style="float: left;") upvote
+
+          div
+            ul.allcomments
+              form.commentPostForm
+                li.cmt
+                  .cmt-content
+                    p(style="font-family: Varela Round ;color: white;margin-top: 4px;margin-left: 8px; margin-bottom: 8px;")=`${user.name.split(' ')[0]}`
+                    input#comment-text.cmttext(data-postid=`${post.id}` type="text" name="" placeholder="Write here")
+                    input.cmtbtn(type="submit" name="" value="Post")
+              each comment in comments
+                +showComment(comment)
+
+    script(src='/js/bundle.js')

@@ -1,100 +1,89 @@
-body{
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-
-
-.homebackground{
- 
+.homebackground {
   position: absolute;
   right: 0;
   bottom: 0;
   height: 500px;
   width: 500px;
-
 }
 
-
-
-.navimage{
-    width: 20px;
-    height: 20px;
-    display: block;
-    color: white;
-    
-    padding-left: 15px;
-    padding-right: 15px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
+.navimage {
+  width: 20px;
+  height: 20px;
+  display: block;
+  color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
-.navimage :hover{
+/* .navimage :hover{
   background-color:#55396D;
   color: white;
   display: block;
+} */
 
+ul li .navimage:hover {
+  background-color: #55396d;
+  color: white;
+  display: block;
 }
 
-.maincard{
-
+.maincard {
   width: 250px;
   height: 110px;
   margin-top: 30px;
   margin-right: 30px;
-  box-shadow: 0 4px 8px 0 #BEA6D4;
+  box-shadow: 0 4px 8px 0 #bea6d4;
   border-radius: 10px;
   position: absolute;
   right: 0;
   text-align: center;
-
 }
 
-.maincardimg{
-
+.maincardimg {
   width: 70px;
   height: 70px;
   margin: 20px;
 }
 
-.maincardcontainer{
-  padding: 2px 16px; 
+.maincardcontainer {
+  padding: 2px 16px;
 }
 
-.maincardpara{
-
+.maincardpara {
   font-size: 16px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   margin-top: 12px;
   margin-left: 10px;
   margin-bottom: 0px;
-  color: #21033B;
+  color: #21033b;
   text-align: left;
-
 }
 
-.maincard:hover{
-  box-shadow: 0 8px 16px 0 #FFD800;
+.maincard:hover {
+  box-shadow: 0 8px 16px 0 #ffd800;
 }
 
-.maincard:hover .maincardpara{
-
-  color : #FFD800
+.maincard:hover .maincardpara {
+  color: #ffd800;
 }
 
-
-.cards{
-
+.cards {
   margin-top: 125px;
   margin-left: 100px;
   position: absolute;
-
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 #BEA6D4;
+  box-shadow: 0 4px 8px 0 #bea6d4;
   transition: 0.3s;
   width: 200px;
   height: 200px;
@@ -103,10 +92,8 @@ body{
   border-radius: 5px;
 }
 
-
-.card:hover .cardpara{
- 
-  color: #FFD800;
+.card:hover .cardpara {
+  color: #ffd800;
 }
 
 .cardimg {
@@ -121,35 +108,32 @@ body{
   padding: 2px 16px;
 }
 
-
-.cardhead{
-
+.cardhead {
   font-size: 24px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   margin-top: 4px;
   margin-bottom: 0px;
-  color: #BEA6D4 ;
+  color: #bea6d4;
   text-align: center;
 }
 
-.cardpara{
-
+.cardpara {
   font-size: 28px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   margin-top: 8px;
   margin-bottom: 4px;
-  color: #BEA6D4;
+  color: #bea6d4;
   text-align: center;
 }
 
-.complaintcards{
+.complaintcards {
   margin-top: 375px;
   margin-left: 150px;
   position: absolute;
 }
 
-.complaintcard{
-  box-shadow: 0 4px 8px 0 #BEA6D4;
+.complaintcard {
+  box-shadow: 0 4px 8px 0 #bea6d4;
   transition: 0.3s;
   width: 700px;
   height: 300px;
@@ -162,18 +146,17 @@ body{
   border-radius: 5px;
 }
 
-.complaintcard::-webkit-scrollbar{
+.complaintcard::-webkit-scrollbar {
   display: none;
   width: 0px;
   height: 0px;
 }
 
-
-.eachcompcard{
+.eachcompcard {
   transition: 0.3s;
-  background-color: #BEA6D4;
+  background-color: #bea6d4;
   width: 600px;
-  height: 70px;
+  height: 110px;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 20px;
@@ -181,11 +164,11 @@ body{
   border-radius: 5px;
 }
 
-.eachblogcard{
+.eachblogcard {
   transition: 0.3s;
   background-color: lightpink;
   width: 600px;
-  height: 70px;
+  height: 110px;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 20px;
@@ -193,27 +176,27 @@ body{
   border-radius: 5px;
 }
 
-.complaintcardname{
+.complaintcardname {
   margin: 0px;
   margin-left: 8px;
   padding-top: 8px;
   margin-top: 8px;
   margin-bottom: 4px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   font-size: 14px;
   color: white;
 }
 
-.complaintcardtag{
+.complaintcardtag {
   margin: 0px;
   margin-left: 8px;
   margin-bottom: 4px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   font-size: 10px;
   color: white;
 }
 
-.complaintcardmsg{
+.complaintcardmsg {
   margin: 0px;
   height: 14px;
   overflow: hidden;
@@ -222,25 +205,177 @@ body{
   margin-left: 8px;
   margin-bottom: 8px;
   margin-right: 4px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   font-size: 12px;
   color: white;
 }
 
-h1{
+.morebtn:before {
+  background: url('/img/blog/more.svg') no-repeat scroll center center / 100%
+    auto rgba(0, 0, 0, 0);
+  content: '';
+  display: inline-block;
+  color: #fff;
+  height: 15px;
+  margin-right: 4px;
+  position: relative;
+  vertical-align: middle;
+  width: 30px;
+  background-color: #ffb6c1;
+  border: none;
+}
 
-  color:#55396D;
+.morebtn {
+  font-family: 'Varela Round';
+  width: 90px;
+  height: 20px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: #ffb6c1;
+  outline: none;
+}
+
+.morebtn :after {
+  border: none;
+}
+
+.morebtnone:before {
+  background: url('/img/blog/more.svg') no-repeat scroll center center / 100%
+    auto rgba(0, 0, 0, 0);
+  content: '';
+  display: inline-block;
+  color: #fff;
+  height: 15px;
+  margin-right: 4px;
+  position: relative;
+  vertical-align: middle;
+  width: 30px;
+  background-color: #bea6d4;
+  border: none;
+}
+
+.morebtnone {
+  font-family: 'Varela Round';
+  width: 90px;
+  height: 20px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: #bea6d4;
+  outline: none;
+}
+
+.morebtnone :after {
+  border: none;
+}
+
+.closebtn:before {
+  background: url('/img/blog/close.svg') no-repeat scroll center center / 100%
+    auto rgba(0, 0, 0, 0);
+  content: '';
+  display: inline-block;
+  color: #fff;
+  height: 15px;
+  position: relative;
+  vertical-align: middle;
+  width: 15px;
+  background-color: white;
+  border: none;
+}
+
+.closebtn {
+  font-family: 'Varela Round';
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: white;
+  outline: none;
+}
+
+.closebtn :after {
+  border: none;
+}
+
+.upvotebtn:before {
+  background: url('/img/blog/upvote.svg') no-repeat scroll center center / 100%
+    auto rgba(0, 0, 0, 0);
+  content: '';
+  display: inline-block;
+  color: #fff;
+  height: 15px;
+  padding-bottom: 2px;
+  margin-right: 4px;
+  position: relative;
+  vertical-align: middle;
+  width: 15px;
+  background-color: #bea6d4;
+  border: none;
+}
+
+.upvotebtn {
+  margin-left: 12px;
+  border-radius: 8px;
+  padding-top: 4px;
+  font-family: 'Varela Round';
+  width: 90px;
+  height: 28px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: #bea6d4;
+  outline: none;
+}
+
+.upvotebtn :after {
+  border: none;
+}
+
+.upvotebtnone:before {
+  background: url('/img/blog/upvote.svg') no-repeat scroll center center / 100%
+    auto rgba(0, 0, 0, 0);
+  content: '';
+  display: inline-block;
+  color: #fff;
+  height: 15px;
+  padding-bottom: 2px;
+  margin-right: 4px;
+  position: relative;
+  vertical-align: middle;
+  width: 15px;
+  background-color: lightpink;
+  border: none;
+}
+
+.upvotebtnone {
+  margin-left: 12px;
+  border-radius: 8px;
+  padding-top: 4px;
+  font-family: 'Varela Round';
+  width: 90px;
+  height: 28px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: lightpink;
+  outline: none;
+}
+
+.upvotebtnone :after {
+  border: none;
+}
+
+h1 {
+  color: #55396d;
   font-size: 28px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   margin-top: 50px;
   margin-left: 150px;
   font-weight: bold;
   position: absolute;
-
 }
 
-
-.eleblogcard{
+.eleblogcard {
   transition: 0.3s;
   background-color: lightpink;
   width: 90%;
@@ -252,24 +387,24 @@ h1{
   border-radius: 5px;
 }
 
-.eleblogcardname{
+.eleblogcardname {
   margin: 0px;
   margin-bottom: 10px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   font-size: 18px;
   color: white;
 }
 
-.eleblogcardmsg{
+.eleblogcardmsg {
   margin: 0px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   font-size: 16px;
   color: white;
 }
 
-.elecompcard{
+.elecompcard {
   transition: 0.3s;
-  background-color: #BEA6D4;
+  background-color: #bea6d4;
   width: 90%;
   padding: 20px;
   margin-left: 50px;
@@ -279,24 +414,24 @@ h1{
   border-radius: 5px;
 }
 
-.elecompcardname{
+.elecompcardname {
   margin: 0px;
   margin-bottom: 10px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   font-size: 18px;
   color: white;
 }
 
-.elecompcardtag{
+.elecompcardtag {
   margin: 0px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   font-size: 16px;
   color: white;
 }
 
-.elecompcardmsg{
+.elecompcardmsg {
   margin: 0px;
-  font-family: "Varela Round";
+  font-family: 'Varela Round';
   font-size: 16px;
   color: white;
 }
@@ -311,8 +446,8 @@ h1{
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
 
 /* Modal Content */
@@ -327,7 +462,7 @@ h1{
   height: 80%;
 }
 
-.modal-content::-webkit-scrollbar{
+.modal-content::-webkit-scrollbar {
   display: none;
   width: 0px;
   height: 0px;
@@ -347,69 +482,177 @@ h1{
   cursor: pointer;
 }
 
-.allcomments{
+.cmttext {
+  padding: 8px;
+  width: 75%;
+  margin-left: 8px;
+  border: 0;
+  font-family: 'Varela Round';
+  font-size: 14px;
+  background: white;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cmtbtn {
+  width: 15%;
+  padding: 6px;
+  margin-right: 5%;
+  border: 0;
+  font-family: 'Varela Round';
+  font-size: 16px;
+  background: white;
+  float: right;
+  display: block;
+  text-align: center;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cmtbtn:hover {
+  color: white;
+  background-color: #79648d;
+}
+
+.cmtbtnone {
+  width: 15%;
+  padding: 6px;
+  margin-right: 5%;
+  border: 0;
+  font-family: 'Varela Round';
+  font-size: 16px;
+  background: white;
+  float: right;
+  display: block;
+  text-align: center;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cmtbtnone:hover {
+  color: white;
+  background-color: #ff7086;
+}
+
+.replybtn {
+  width: 10%;
+  padding: 4px;
+  border: 0;
+  font-family: 'Varela Round';
+  margin-left: 8px;
+  font-size: 10px;
+  background: white;
+  display: block;
+  text-align: center;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.replybtn:hover {
+  color: white;
+  background-color: #79648d;
+}
+
+.replybtnone {
+  width: 10%;
+  padding: 4px;
+  border: 0;
+  font-family: 'Varela Round';
+  margin-left: 8px;
+  font-size: 10px;
+  background: white;
+  display: block;
+  text-align: center;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.replybtnone:hover {
+  color: white;
+  background-color: #ff7086;
+}
+
+.allcomments {
   width: 90%;
   position: relative;
   background-color: white;
-  margin-top: 20px;
+  margin-top: 50px;
   margin-left: 50px;
   margin-right: 50px;
 }
 
-.cmt{
+.cmt {
   display: block;
   position: relative;
-  width: 90%;
-  background-color: #BEA6D4;
+  margin-top: 12px;
+  /* width: 90%; */
+  background-color: white;
   color: white;
   border-radius: 5px;
 }
 
-.avatar{
+.avatar {
   position: absolute;
   top: 8px;
   left: 8px;
 }
 
-.avatar-img{
+.avatar-img {
   width: 50px;
   height: 50px;
 }
 
-.cmt-content{
+.cmt-content {
   /* position: absolute;
   float: left; */
+  width: 90%;
+  background-color: #bea6d4;
+  border-radius: 4px;
   padding: 0px 3px;
   padding-bottom: 8px;
-  padding-top: 4px;
+  padding-top: 8px;
 }
 
-.replies{
+.cmt-contentone {
+  /* position: absolute;
+  float: left; */
+  width: 90%;
+  background-color: lightpink;
+  border-radius: 4px;
+  padding: 0px 3px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.replies {
   margin-bottom: 8px;
+  margin-top: 8px;
 }
 
 .navbar {
   position: absolute;
-    list-style-type: none;
-    margin-top: 50px;
-    margin-left: 30px;
-    padding: 0;
-    padding-top: 10px;
-    width: 50px;
-    height: 600px;
-    border-radius: 24px;
-    -moz-border-radius: 24px;
-    -webkit-border-radius: 24px;
-    background-color: #21033B;
-  }
-  
- /* ul li img {
+  list-style-type: none;
+  margin-top: 50px;
+  margin-left: 30px;
+  padding: 0;
+  padding-top: 10px;
+  width: 50px;
+  height: 600px;
+  border-radius: 24px;
+  -moz-border-radius: 24px;
+  -webkit-border-radius: 24px;
+  background-color: #21033b;
+}
+
+/* ul li img {
     
   } */
 /* 
  ul li img:hover {
 
   } */
-
-  
-  

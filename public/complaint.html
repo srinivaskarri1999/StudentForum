@@ -1,52 +1,114 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>َAnimated Login Form</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//fonts.googleapis.com/css?family=Varela+Round"
-    />
-    <link rel="stylesheet" href="/css/complaint_style.css" />
-  </head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    <link rel="stylesheet" href="complaint_style.css">
+</head>
   <body>
     <h1 class="mainheading">Complaints</h1>
-    <ul>
-      <li><img src="/img/blog/online.png" class="navimage" /></li>
-      <li><img src="/img/blog/home.png" class="navimage" /></li>
-      <li><img src="/img/blog/blog.png" class="navimage" /></li>
-      <li><img src="/img/blog/complaint.png" class="navimage" /></li>
-      <li><img src="/img/blog/logout.png" class="navimage" /></li>
+    <ul class="navbar">
+      <li><img src="online.png" class="navimage" /></li>
+      <li><a href="home.html"><img src="home.png" class="navimage" /></a></li>
+      <li><a href="blog.html"><img src="blog.png" class="navimage" /></a></li>
+      <li><a href="complaint.html"><img src="complaint.png" class="navimage" /></a></li>
+      <li><a href="index.html"><img src="logout.png" class="navimage" /></a></li>
     </ul>
-
+    
     <div class="complaintcard">
-      <div class="maincardcontainer">
-        <form class="box">
-          <h1 class="ccardhead">Post</h1>
-          <p class="ccardpara">Have a complaint? post it here</p>
-          <input class="ccardtitle" type="text" name="" placeholder="Title" />
-          <section class="container">
-            <div class="dropdown">
-              <select name="one" class="dropdown-select">
-                <option value="">Select…</option>
-                <option value="1">Academics</option>
-                <option value="2">Library</option>
-                <option value="3">Hostel</option>
-                <option value="4">Canteen</option>
-                <option value="5">Other</option>
-              </select>
-            </div>
-          </section>
-          <textarea
-            rows="10"
-            cols="70"
-            class="ccardmsg"
-            placeholder="Context"
-          ></textarea>
-          <input class="ccardbtn" type="submit" name="" value="Post" />
-        </form>
+        <div class="maincardcontainer">
+            <form class="box">
+                <h1 class="ccardhead" >Post</h1>
+                <p class="ccardpara">Have a complaint? post it here</p>
+                <input class="ccardtitle" type="text" name="" placeholder="Title">
+                <section class="container">
+                  <div class="dropdown">
+                    <select name="one" class="dropdown-select">
+                      <option value="">Select…</option>
+                      <option value="1">Academics</option>
+                      <option value="2">Library</option>
+                      <option value="3">Hostel</option>
+                      <option value="4">Canteen</option>
+                      <option value="5">Other</option>
+                    </select>
+                  </div>
+                  </section>
+                <textarea rows="10" cols="70" class="ccardmsg" placeholder="Context"></textarea>
+                <input class="ccardbtn" type="submit" name="" value="Post">
+              </form>
+        </div>
       </div>
-    </div>
+      <div class="complaintcards">
+        <div class="compcard">
+            <div id="myBtn" class="eachcompcard">
+              <p class="complaintcardname">Scarlet</p>
+              <p class="complaintcardtag">2017-IMT028</p>
+              <p class="complaintcardmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni deserunt vel voluptates aspernatur amet. Vitae totam, ea perspiciatis esse similique vel rem tempora eum distinctio quae dignissimos dolore illo consectetur?</p> 
+              <button class="morebtn">more</button>
+            </div>
+        </div>
+      </div>
+      <div id="myModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <div class="eleblogcard">
+            <p class="eleblogcardname">Scarlet</p>
+            <p class="eleblogcardname">Title</p>
+            <p class="eleblogcardmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni deserunt vel voluptates aspernatur amet. Vitae totam, ea perspiciatis esse similique vel rem tempora eum distinctio quae dignissimos dolore illo consectetur?</p>
+          </div>
+          <div>
+            <h4 style="margin: 0px; color: lightgray; margin-top: 4px; margin-left: 60px; font-size: 14px; font-family: sans-serif; color: black; float: left; ">24</h4>
+            <button style="float: left;" class="upvotebtn">upvote</button>
+          </div>
+          <div>
+            <ul class="allcomments">
+              <li class="cmt">
+                <div class="cmt-content">
+                  <p style="font-family: Varela Round ;color: white;margin-top: 4px;margin-left: 8px; margin-bottom: 8px;">Name</p>
+                  <input class="cmttext" type="text" name="" placeholder="Write here">  
+                  <input class="cmtbtn" type="submit" name="" value="Post">
+                </div>
+              </li>
+              <li class="cmt">
+                <!-- <div class="avatar">
+                  <img class="avatar-img"/>
+                </div> -->
+                <div class="cmt-content">
+                  <p style="font-family: Varela Round ; font-size: 12px; color: white;margin-top: 4px;margin-left: 8px; margin-bottom: 8px;">Name</p> 
+                  <p style="width: 75%; font-family: Varela Round ;color: white; margin: 0px; margin-top: 4px;margin-left: 8px;margin-bottom: 8px;">Comment goes here</p>
+                </div>
+              </li>  
+            </ul>
+          </div>      
+        </div>
+      </div>
+      <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      </script>    
   </body>
 </html>

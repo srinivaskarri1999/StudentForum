@@ -1,190 +1,193 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>َAnimated Login Form</title>
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="//fonts.googleapis.com/css?family=Varela+Round"
-    />
-    <link rel="stylesheet" href="/css/home_style.css" />
-  </head>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    <link rel="stylesheet" href="home_style.css">
+</head>
   <body>
     <h1>My Dashboard</h1>
     <ul class="navbar">
-      <li><img src="/img/blog/online.png" class="navimage" /></li>
-      <li><img src="/img/blog/home.png" class="navimage" /></li>
-      <li>
-        <a href="blog.html"
-          ><img src="/img/blog/blog.png" class="navimage"
-        /></a>
-      </li>
-      <li><img src="/img/blog/complaint.png" class="navimage" /></li>
-      <li><img src="/img/blog/logout.png" class="navimage" /></li>
+        <li><img src="online.png" class="navimage" /></li>
+        <li><img src="home.png" class="navimage" /></li>
+        <li><a href="blog.html"><img src="blog.png" class="navimage" /></a></li>
+        <li><img src="complaint.png" class="navimage" /></li>
+        <li><img src="logout.png" class="navimage" /></li>
     </ul>
-
-    <div class="cards">
-      <div id="blogdiv" class="card">
-        <img class="cardimg" src="/img/blog/6.svg" />
-        <div class="container">
-          <h4 class="cardhead"><b>Posts</b></h4>
-          <p class="cardpara">24</p>
-        </div>
-      </div>
-      <div id="complaintdiv" class="card">
-        <img class="cardimg" src="/img/blog/7.svg" />
-        <div class="container">
-          <h4 class="cardhead"><b>Complaints</b></h4>
-          <p class="cardpara">3</p>
-        </div>
-      </div>
-      <div class="card">
-        <img class="cardimg" src="/img/blog/8.svg" />
-        <div class="container">
-          <h4 class="cardhead"><b>Upvotes</b></h4>
-          <p class="cardpara">1</p>
-        </div>
+    
+   <div class="cards">
+    <div id="blogdiv" class="card">
+      <img class="cardimg" src="6.svg">
+      <div class="container">
+        <h4 class="cardhead"><b>Posts</b></h4> 
+        <p class="cardpara">24</p> 
       </div>
     </div>
-
-    <div class="maincard">
-      <img
-        style="float: left;"
-        class="maincardimg"
-        src="/img/user/female.svg"
-      />
-      <div class="maincardcontainer">
-        <p class="maincardpara">Scarlet</p>
-        <p class="maincardpara">2017-IMT028</p>
-        <p class="maincardpara">ABV-IIITM</p>
+    <div id="complaintdiv" class="card">
+      <img class="cardimg" src="7.svg">
+      <div class="container">
+        <h4 class="cardhead"><b>Complaints</b></h4> 
+        <p class="cardpara">3</p> 
       </div>
     </div>
-    <div class="complaintcards">
-      <div id="showeachblogcard" class="complaintcard">
-        <div id="myBtnblog" class="eachblogcard">
-          <p class="complaintcardname">Scarlet</p>
-          <p class="complaintcardmsg">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-            deserunt vel voluptates aspernatur amet. Vitae totam, ea
-            perspiciatis esse similique vel rem tempora eum distinctio quae
-            dignissimos dolore illo consectetur?
-          </p>
-        </div>
+    <div class="card">
+      <img class="cardimg" src="8.svg">
+      <div class="container">
+        <h4 class="cardhead"><b>Upvotes</b></h4> 
+        <p class="cardpara">1</p> 
       </div>
-      <div id="showcomplaintcard" class="complaintcard">
+    </div>
+  </div>
+
+  <div class="maincard">
+    <img style="float: left;" class="maincardimg" src="female.svg">
+    <div class="maincardcontainer">
+      <p class="maincardpara">Scarlet</p>
+      <p class="maincardpara">2017-IMT028</p>
+      <p class="maincardpara">ABV-IIITM</p> 
+    </div>
+  </div>
+  <div class="complaintcards">
+    <div id="showeachblogcard" class="complaintcard">
+      <div class="eachblogcard">
+        <p class="complaintcardname">Scarlet-2017IMT-028</p>
+        <p class="complaintcardname" style="margin-top: 4px;">Title</p>
+        <p class="complaintcardmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni deserunt vel voluptates aspernatur amet. Vitae totam, ea perspiciatis esse similique vel rem tempora eum distinctio quae dignissimos dolore illo consectetur?</p> 
+        <div id="myBtnblog">
+          <button class="morebtn">more</button>
+        </div>  
+      </div>
+    </div>
+    <div id="showcomplaintcard" class="complaintcard">
         <div id="myBtncomp" class="eachcompcard">
-          <p class="complaintcardname">Scarlet</p>
-          <p class="complaintcardtag">2017-IMT028</p>
-          <p class="complaintcardmsg">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-            deserunt vel voluptates aspernatur amet. Vitae totam, ea
-            perspiciatis esse similique vel rem tempora eum distinctio quae
-            dignissimos dolore illo consectetur?
-          </p>
+          <p class="complaintcardname">Scarlet-2017IMT-028</p>
+          <p class="complaintcardname" style="margin-top: 4px;">Tag</p>
+          <p class="complaintcardmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni deserunt vel voluptates aspernatur amet. Vitae totam, ea perspiciatis esse similique vel rem tempora eum distinctio quae dignissimos dolore illo consectetur?</p> 
         </div>
-      </div>
     </div>
+  </div>
 
-    <div id="myModal" class="modal">
-      <div class="modal-content">
-        <div>
-          <div class="eleblogcard">
-            <p class="eleblogcardname">Scarlet</p>
-            <p class="eleblogcardmsg">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-              deserunt vel voluptates aspernatur amet. Vitae totam, ea
-              perspiciatis esse similique vel rem tempora eum distinctio quae
-              dignissimos dolore illo consectetur?
-            </p>
-          </div>
-          <div>
-            <ul class="allcomments">
-              <li class="cmt">
-                <!-- <div class="avatar">
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <div>
+      <button class="closebtn"></button>
+      <div class="eleblogcard">
+        <p class="eleblogcardname">Scarlet</p>
+        <p class="eleblogcardname">Title</p>
+        <p class="eleblogcardmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni deserunt vel voluptates aspernatur amet. Vitae totam, ea perspiciatis esse similique vel rem tempora eum distinctio quae dignissimos dolore illo consectetur?</p>
+      </div>
+      <div>
+        <h4 style="margin: 0px; color: #BEA6D4; margin-top: 4px; margin-left: 60px; font-size: 14px; font-family: Varela Round; color: black; float: left; ">24</h4>
+        <button style="float: left;" class="upvotebtn">upvote</button>
+      </div>
+      <div>
+        <ul class="allcomments">
+          <li class="cmt">
+            <div class="cmt-content">
+              <p style="font-family: Varela Round ;color: white;margin-top: 4px;margin-left: 8px; margin-bottom: 8px;">Name</p>
+              <input class="cmttext" type="text" name="" placeholder="Write here">  
+              <input class="cmtbtn" type="submit" name="" value="Post">
+            </div>
+          </li>  
+          <li class="cmt">
+            <!-- <div class="avatar">
               <img class="avatar-img"/>
             </div> -->
-                <div class="cmt-content">
-                  <h6 style="color: white;">Name</h6>
-                  <p style="color: white;">Comment goes here</p>
-                </div>
-                <ul class="replies">
-                  <li class="cmt">
-                    <!-- <div class="avatar">
+            <div class="cmt-content">
+              <p style="font-family: Varela Round ; font-size: 12px; color: white;margin-top: 4px;margin-left: 8px; margin-bottom: 8px;">Name</p> 
+              <p style="width: 75%; font-family: Varela Round ;color: white; margin: 0px; margin-top: 4px;margin-left: 8px;margin-bottom: 8px;">Comment goes here</p>
+              <input class="replybtn" type="submit" name="" value="reply">
+            </div>
+            <ul class="replies">
+              <li class="cmt">
+                <!-- <div class="avatar">
                   <img class="avatar-img"/>
                 </div> -->
-                    <div class="cmt-content">
-                      <h6 style="color: white;">Name</h6>
-                      <p style="color: white;">Comment goes here</p>
-                    </div>
-                  </li>
-                </ul>
-              </li>
+                <div class="cmt-content">
+                  <p style="font-family: Varela Round ; font-size: 12px; color: white;margin-top: 4px;margin-left: 8px; margin-bottom: 8px;">Name</p> 
+                  <p style="width: 75%; font-family: Varela Round ;color: white; margin: 0px; margin-top: 4px;margin-left: 8px;margin-bottom: 8px;">Comment goes here</p>
+                  <input class="replybtn" type="submit" name="" value="reply">
+                </div>
+              </li> 
             </ul>
-          </div>
-        </div>
+          </li>
+          <li class="cmt">
+            <!-- <div class="avatar">
+              <img class="avatar-img"/>
+            </div> -->
+            <div class="cmt-content">
+              <p style="font-family: Varela Round ; font-size: 12px; color: white;margin-top: 4px;margin-left: 8px; margin-bottom: 8px;">Name</p> 
+              <p style="width: 75%; font-family: Varela Round ;color: white; margin: 0px; margin-top: 4px;margin-left: 8px;margin-bottom: 8px;">Comment goes here</p>
+              <input class="replybtn" type="submit" name="" value="reply">
+            </div>
+          </li>  
+        </ul>  
+      </div>
       </div>
     </div>
+  </div>
 
-    <div id="myModal2" class="modal">
-      <div class="modal-content">
-        <div class="elecompcard">
-          <p class="elecompcardname">Scarlet</p>
-          <p class="elecompcardtag">Canteen</p>
-          <p class="elecompcardmsg">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni
-            deserunt vel voluptates aspernatur amet. Vitae totam, ea
-            perspiciatis esse similique vel rem tempora eum distinctio quae
-            dignissimos dolore illo consectetur?
-          </p>
-        </div>
+  <div id="myModal2" class="modal">
+    <div class="modal-content">
+      <div class="elecompcard">
+        <p class="elecompcardname">Scarlet</p>
+        <p class="elecompcardtag">Canteen</p>
+        <p class="elecompcardmsg">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni deserunt vel voluptates aspernatur amet. Vitae totam, ea perspiciatis esse similique vel rem tempora eum distinctio quae dignissimos dolore illo consectetur?</p>
       </div>
     </div>
+  </div>
 
-    <img src="/img/blog/home_background.svg" class="homebackground" />
+  <img src="home_background.svg" class="homebackground"/>
 
-    <script>
-      var bcard = document.getElementById('blogdiv');
-      var ccard = document.getElementById('complaintdiv');
-      var blog = document.getElementById('showeachblogcard');
-      var comp = document.getElementById('showcomplaintcard');
-      blog.style.display = 'none';
-      comp.style.display = 'none';
+  <script>
+    
+    var bcard = document.getElementById("blogdiv");
+    var ccard = document.getElementById("complaintdiv");
+    var blog = document.getElementById("showeachblogcard");
+    var comp = document.getElementById("showcomplaintcard");
+    blog.style.display = "none";
+    comp.style.display = "none";
 
-      window.addEventListener('click', function (e) {
-        if (document.getElementById('blogdiv').contains(e.target)) {
-          comp.style.display = 'none';
-          blog.style.display = 'block';
-          bcard.style.boxShadow = '0 8px 16px 0 #FFD800';
-          ccard.style.boxShadow = '0 4px 8px 0 #BEA6D4';
-        } else if (document.getElementById('complaintdiv').contains(e.target)) {
-          comp.style.display = 'block';
-          blog.style.display = 'none';
-          ccard.style.boxShadow = '0 8px 16px 0 #FFD800';
-          bcard.style.boxShadow = '0 4px 8px 0 #BEA6D4';
-        } else {
-          blog.style.display = 'none';
-          comp.style.display = 'none';
-          bcard.style.boxShadow = '0 4px 8px 0 #BEA6D4';
-          ccard.style.boxShadow = '0 4px 8px 0 #BEA6D4';
+    window.addEventListener('click', function(e){
+	
+      if (document.getElementById('blogdiv').contains(e.target)){
+        comp.style.display = "none";
+        blog.style.display = "block";
+        bcard.style.boxShadow = "0 8px 16px 0 #FFD800";
+        ccard.style.boxShadow = "0 4px 8px 0 #BEA6D4";
+      }
+       else if(document.getElementById('complaintdiv').contains(e.target))
+        {
+          comp.style.display = "block";
+          blog.style.display = "none";
+          ccard.style.boxShadow = "0 8px 16px 0 #FFD800";
+          bcard.style.boxShadow = "0 4px 8px 0 #BEA6D4";
         }
-      });
+        else{
+        blog.style.display = "none";
+        comp.style.display = "none";
+        bcard.style.boxShadow = "0 4px 8px 0 #BEA6D4";
+        ccard.style.boxShadow = "0 4px 8px 0 #BEA6D4";
+        }
+    })
 
-      var modal = document.getElementById('myModal');
-      var modal2 = document.getElementById('myModal2');
-      var bbtn = document.getElementById('myBtnblog');
-      var cbtn = document.getElementById('myBtncomp');
+
+      var modal = document.getElementById("myModal");
+      var modal2 = document.getElementById("myModal2");
+      var bbtn = document.getElementById("myBtnblog");
+      var cbtn = document.getElementById("myBtncomp");
       // var span = document.getElementsById("close")[0];
       // var span2 = document.getElementsById("close2")[0];
 
-      bbtn.onclick = function () {
-        modal.style.display = 'block';
-      };
+      bbtn.onclick = function() {
+        modal.style.display = "block";
+      }
 
-      cbtn.onclick = function () {
-        modal2.style.display = 'block';
-      };
-
+      cbtn.onclick = function() {
+        modal2.style.display = "block";
+      }
+    
       // span.onclick = function() {
       //   modal.style.display = "none";
       // }
@@ -192,15 +195,19 @@
       // span2.onclick = function() {
       //   modal2.style.display = "none";
       // }
-
-      window.onclick = function (event) {
+    
+      window.onclick = function(event) {
         if (event.target == modal) {
-          modal.style.display = 'none';
+          modal.style.display = "none";
         }
         if (event.target == modal2) {
-          modal2.style.display = 'none';
+          modal2.style.display = "none";
         }
-      };
-    </script>
+      }
+
+
+    </script>  
+
+
   </body>
 </html>

@@ -15,7 +15,7 @@ const userRouter = require('./routes/userRoutes');
 const blogRouter = require('./routes/blogRoutes');
 const commentRouter = require('./routes/commentRouter');
 const upvoteRouter = require('./routes/upvoteRouter');
-//TODO viewRouter CommentRouter
+const viewRouter = require('./routes/viewRouter');
 
 // const viewRouter = require('./routes/viewRoutes');
 
@@ -71,6 +71,7 @@ app.use((req, res, next) => {
 // 3) ROUTES
 // TODO add viewRouter middleware
 // app.use('/', viewRouter);
+app.use('/', viewRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/blog', blogRouter);
 app.use('/api/v1/comments', commentRouter);

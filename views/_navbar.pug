@@ -1,0 +1,12 @@
+mixin navvbar(url, img)
+  li
+    a(href=url)
+      img.navimage(src=`/img/blog/${img}`)
+
+mixin navbar()
+  +navvbar("#", "online.png")
+  +navvbar("/myDashboard", "home.png")
+  +navvbar("/blog", "blog.png")
+  +navvbar("/complaint", "complaint.png")
+  li
+    img.navimage(id="logout" src="/img/blog/logout.png")

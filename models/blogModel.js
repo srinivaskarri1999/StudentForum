@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const generateSlug = require('../utils/generateSlug');
-// const User = require('./userModel');
+const User = require('./userModel');
 // const validator = require('validator');
 
 const blogSchema = new mongoose.Schema(
@@ -16,7 +16,7 @@ const blogSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    tags: [String],
+    tags: String,
     slug: {
       type: String,
       unique: true,
@@ -103,18 +103,62 @@ blogSchema.pre(/^find/, function (next) {
   next();
 });
 
-// blogSchema.post(/^find/, function(docs, next) {
-//   console.log(`Query took ${Date.now() - this.start} milliseconds!`);
-//   next();
-// });
+blogSchema.statics.calcNumberOfPosts = async function (postId) {
+  const { userId } = await this.findById(postId);
+  const stats = await this.aggregate([
+    {
+      $match: { userId, blogType: 'article' },
+    },
+    {
+      $group: {
+        _id: '$id',
+        nUpvotes: { $sum: 1 },
+      },
+    },
+  ]);
+  // console.log(stats);
 
-// AGGREGATION MIDDLEWARE
-// blogSchema.pre('aggregate', function(next) {
-//   this.pipeline().unshift({ $match: { secretTour: { $ne: true } } });
+  if (stats.length > 0) {
+    await User.findByIdAndUpdate(userId, {
+      numberOfPosts: stats[0].nUpvotes,
+    });
+  } else {
+    await User.findByIdAndUpdate(userId, {
+      numberOfPosts: 0,
+    });
+  }
+};
 
-//   console.log(this.pipeline());
-//   next();
-// });
+blogSchema.statics.calcNumberOfComplaints = async function (postId) {
+  const { userId } = await this.findById(postId);
+  const stats = await this.aggregate([
+    {
+      $match: { userId, blogType: 'complaint' },
+    },
+    {
+      $group: {
+        _id: '$id',
+        nUpvotes: { $sum: 1 },
+      },
+    },
+  ]);
+  // console.log(stats);
+
+  if (stats.length > 0) {
+    await User.findByIdAndUpdate(userId, {
+      numberOfComplaints: stats[0].nUpvotes,
+    });
+  } else {
+    await User.findByIdAndUpdate(userId, {
+      numberOfComplaints: 0,
+    });
+  }
+};
+
+blogSchema.post('save', function () {
+  if (this.blogType === 'article') this.constructor.calcNumberOfPosts(this.id);
+  else this.constructor.calcNumberOfComplaints(this.id);
+});
 
 const Blog = mongoose.model('Blog', blogSchema);
 

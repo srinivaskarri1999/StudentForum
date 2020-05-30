@@ -1,0 +1,16 @@
+extends slrbase
+
+block content
+  form.box.login-box
+    h1 Sign In
+    p login with your collage id to get started
+    input#email(type="text" name="" placeholder="Email ID")
+    input#password(type="password" name="" placeholder="Password")
+    input(type="submit" name="" value="Login")
+    p(style="color: black;margin-bottom: 0px; margin-top: 40px; cursor: pointer;")
+      | First time here? 
+      b(style="color: #6A4C96;") 
+        a(href="/signup") Sign up to join our forum
+    p(style="color: #6A4C96; margin-top: 15px; cursor: pointer;")
+      b
+        a(href="/forgotPassword") Forgot Password?

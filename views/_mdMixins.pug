@@ -1,0 +1,29 @@
+mixin top3cards(idname, img, title, text)
+  .card(id=idname)
+    img.cardimg(src=`/img/blog/${img}`)
+    .container
+      h4.cardhead
+        b=title
+      p.cardpara=text
+
+mixin posts(cls, post, btncls)
+  div(class=cls)
+    p.complaintcardname=`${user.name.split(' ')[0]} ${user.rollNumber}`
+    p.complaintcardname(style="margin-top: 4px;")=post.title
+    p.complaintcardmsg=post.text
+    a(href=`/my/posts/${post.slug}`)
+      button(class = btncls) more
+
+mixin inputComment(cls1, cls2)
+  li.cmt
+    form.commentPostForm
+      div(class=cls1)
+        p(style="font-family: Varela Round ;color: white;margin-top: 4px;margin-left: 8px; margin-bottom: 8px;")=`${user.name.split(' ')[0]}`
+        input#comment-text.cmttext(data-postid=`${post.id}` type="text" name="" placeholder="Write here")
+        input(class=cls2 type="submit" name="" value="Post")
+
+mixin showComment(cls, comment)
+  li.cmt
+    div(class=cls)
+      p(style="font-family: Varela Round ; font-size: 12px; color: white;margin-top: 4px;margin-left: 8px; margin-bottom: 8px;")=`${comment.user.name.split(' ')[0]}`
+      p(style="width: 75%; font-family: Varela Round ;color: white; margin: 0px; margin-top: 4px;margin-left: 8px;margin-bottom: 8px;")=comment.text

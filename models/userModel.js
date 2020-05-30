@@ -41,6 +41,14 @@ const userSchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
+    numberOfPosts: {
+      type: Number,
+      default: 0,
+    },
+    numberOfComplaints: {
+      type: Number,
+      default: 0,
+    },
     password: {
       type: String,
       required: [true, 'Please provide a password'],
@@ -86,8 +94,8 @@ userSchema.pre('save', async function (next) {
     const batch = this.email.substr(0, 3);
     const year = this.email.substr(4, 4);
     const no = this.email.substr(8, 3);
-    const rollno = year.concat(batch, `-${no}`);
-    this.rollNumber = rollno.toLowerCase();
+    const rollno = year.concat(`-${batch}`, no);
+    this.rollNumber = rollno.toUpperCase();
     this.slug = this.rollNumber;
   }
   if (!this.isModified('password')) return next();

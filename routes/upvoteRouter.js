@@ -8,6 +8,7 @@ const router = express.Router();
 
 // POST /tour/234fad4/reviews
 // GET /tour/234fad4/reviews
+router.use(authController.protect);
 
 router.route('/').post(authController.protect, upvoteController.createUpvote);
 

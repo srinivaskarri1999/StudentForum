@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>The Student Forum</title>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round" />
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!-- <div id="slider">
+      <figure>
+        <img src="1.png">
+        <img src="1.png">
+        <img src="1.png">
+      </figure>
+    </div> -->
+
+    <h2>The Students Forum</h2>
+    <div class="slideshow-container">
+
+      <!-- Full-width images with number and caption text -->
+      <div class="mySlides fade">
+        <img src="2.svg" class="image">
+        <p class="para">Online based web service where you can fabricate your concepts into actions, spell out complications and panel your blogs.</p>
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="3.svg" class="image">
+        <p class="para">Post your complaint, resolve with comments and likes</p>
+      </div>
+    
+      <div class="mySlides fade">
+        <img src="4.svg" class="image">
+        <p class="para">Maintain your dashboard. Always be active and let the world know about you.</p>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="5.svg" class="image">
+        <p class="para">Share , comment and upvote notions based on your concern.</p>
+      </div>
+    </div>
+    
+    <!-- <img class="image" src="2.svg"/> -->
+    <form class="box" action="index.html" method="post">
+      <div id="logindiv">
+      <h1>Sign In</h1>
+      <p>login with your collage id to get started</p>
+      <input type="text" name="" placeholder="Email ID">
+      <input type="password" name="" placeholder="Password">
+      <input type="submit" name="" value="Login">
+      <p id="lpara" style="color: black;margin-bottom: 0px; margin-top: 40px; cursor: pointer;">First time here? <b style="color: #6A4C96;">Sign up to join our forum</b></p>
+      <p id="fpara" style="color: #6A4C96; margin-top: 15px; cursor: pointer;"><b>Forgot Password?</b></p>
+      </div>
+      <div id="regdiv">
+        <h1>Register</h1>
+        <p>Sign up with your collage id to get started</p>
+        <input type="text" name="" placeholder="Username">
+        <input type="text" name="" placeholder="Email ID">
+        <input type="password" name="" placeholder="Password">
+        <input type="password" name="" placeholder="Confirm Password">
+        <input type="submit" name="" value="Sign Up">
+        <p id="rpara" style="color: black; margin-top: 10px; cursor: pointer;" >Already have an account? <b style="color: #6A4C96;">Login to get started</b></p>
+      </div>
+      <div id="fpdiv">
+        <h1>Reset</h1>
+        <p>Enter Your email id to reset your password</p>
+        <input type="text" name="" placeholder="Email ID">
+        <input type="submit" name="" value="Continue">
+        <p id="loginpara" style="color: black; margin-top: 20px; cursor: pointer;">Know Password <b style="color: #6A4C96;">Login?</b></p>
+      </div>
+    </form>
+
+
+    <script>
+      var slideIndex = 0;
+      var lpara = document.getElementById("lpara");
+      var rpara = document.getElementById("rpara");
+      var fpara = document.getElementById("fpara");
+      var lopara = document.getElementById("loginpara");
+      var ldiv = document.getElementById("logindiv");
+      var rdiv = document.getElementById("regdiv");
+      var fdiv = document.getElementById("fpdiv");
+      rdiv.style.display = "none";
+      fdiv.style.display = "none";
+      showSlides();
+    
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 3000);
+      }
+
+      lpara.onclick = function() {
+        ldiv.style.display = "none";
+        rdiv.style.display = "block";
+      }
+
+      rpara.onclick = function() {
+        rdiv.style.display = "none";
+        ldiv.style.display = "block";
+      }
+
+      fpara.onclick = function() {
+        ldiv.style.display = "none";
+        fdiv.style.display = "block";
+      }
+
+      lopara.onclick = function() {
+        ldiv.style.display = "block";
+        fdiv.style.display = "none";
+      }
+
+      </script>
+      
+  </body>
+</html>

@@ -1,0 +1,26 @@
+doctype html
+html(lang="en" dir="ltr")
+  head
+    meta(charset="utf-8")
+    title #{title} | The Student Forum
+    link(rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round")
+    link(rel="stylesheet" href="/css/style.css")
+  body
+    h2 The Students Forum
+    .slideshow-container
+      .mySlides.fade
+        img.image(src="/img/blog/2.svg")
+        p.para
+          | Online based web service where you can fabricate your concepts into actions, spell out complications and panel your blogs.
+      .mySlides.fade
+        img.image(src="/img/blog/3.svg")
+        p.para Post your complaint, resolve with comments and likes
+      .mySlides.fade
+        img.image(src="/img/blog/4.svg")
+        p.para Maintain your dashboard. Always be active and let the world know about you.
+      .mySlides.fade
+        img.image(src="/img/blog/5.svg")
+        p.para Share , comment and upvote notions based on your concern.
+    block content
+      p placeholder
+    script(src='/js/bundle.js')

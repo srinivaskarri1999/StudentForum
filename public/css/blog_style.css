@@ -1,8 +1,11 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('../img/blog/background_violet.jpg');
-  background-position: initial;
+  background: url('/img/blog/background_violet.png') no-repeat center center
+    fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
 }
 
 .background {
@@ -10,11 +13,6 @@ body {
   z-index: -1;
   left: -5;
   background-repeat: no-repeat;
-}
-
-.navimage {
-  width: 20px;
-  height: 20px;
 }
 
 .mainheading {
@@ -27,7 +25,7 @@ body {
   position: absolute;
 }
 
-ul {
+.navbar {
   position: absolute;
   list-style-type: none;
   margin-top: 50px;
@@ -42,10 +40,11 @@ ul {
   background-color: #21033b;
 }
 
-ul li img {
+.navimage {
+  width: 20px;
+  height: 20px;
   display: block;
   color: white;
-
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 20px;
@@ -54,22 +53,16 @@ ul li img {
   margin-bottom: 50px;
 }
 
-ul li img:hover {
+/* .navimage :hover{
+  background-color:#55396D;
+  color: white;
+  display: block;
+} */
+
+ul li .navimage:hover {
   background-color: #55396d;
   color: white;
   display: block;
-}
-
-li a {
-  display: block;
-  color: white;
-  margin-top: 8px;
-  margin-left: 8px;
-}
-
-li a:hover {
-  background-color: #555;
-  color: white;
 }
 
 .complaintcard {
@@ -135,7 +128,7 @@ li a:hover {
   margin-right: 35px;
   padding: 8px;
   text-align: left;
-  border: 1px solid #6a4c96;
+  border: 1px solid lightpink;
   width: 400px;
   height: 42px;
   outline: none;
@@ -154,7 +147,7 @@ li a:hover {
   margin-right: 35px;
   padding: 8px;
   text-align: start;
-  border: 1px solid #6a4c96;
+  border: 1px solid lightpink;
   width: 400px;
   height: 300px;
   outline: none;
@@ -173,7 +166,7 @@ li a:hover {
   margin-right: 28px;
   right: 0;
   text-align: center;
-  border: 2px solid #6a4c96;
+  border: 2px solid lightpink;
   padding: 14px 40px;
   outline: none;
   color: black;
@@ -182,7 +175,7 @@ li a:hover {
 }
 
 .box input[type='submit']:hover {
-  background: #6a4c96;
+  background: lightpink;
   color: white;
 }
 
@@ -324,9 +317,9 @@ li a:hover {
 
 .eachcompcard {
   transition: 0.3s;
-  background-color: #bea6d4;
+  background-color: lightpink;
   width: 600px;
-  height: 70px;
+  height: 100px;
   margin-left: 50px;
   margin-right: 50px;
   margin-top: 20px;
@@ -370,7 +363,7 @@ li a:hover {
 
 .eleblogcard {
   transition: 0.3s;
-  background-color: #bea6d4;
+  background-color: lightpink;
   width: 90%;
   padding: 20px;
   margin-left: 50px;
@@ -393,6 +386,134 @@ li a:hover {
   font-family: 'Varela Round';
   font-size: 16px;
   color: white;
+}
+
+.morebtn:before {
+  background: url('/img/blog/more.svg') no-repeat scroll center center / 100%
+    auto rgba(0, 0, 0, 0);
+  content: '';
+  display: inline-block;
+  color: #fff;
+  height: 15px;
+  margin-right: 4px;
+  position: relative;
+  vertical-align: middle;
+  width: 30px;
+  background-color: #ffb6c1;
+  border: none;
+}
+
+.morebtn {
+  font-family: 'Varela Round';
+  width: 90px;
+  height: 20px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: #ffb6c1;
+  outline: none;
+}
+
+.morebtn :after {
+  border: none;
+}
+
+.upvotebtn:before {
+  background: url('/img/blog/upvote.svg') no-repeat scroll center center / 100%
+    auto rgba(0, 0, 0, 0);
+  content: '';
+  display: inline-block;
+  color: #fff;
+  height: 15px;
+  padding-bottom: 2px;
+  margin-right: 4px;
+  position: relative;
+  vertical-align: middle;
+  width: 15px;
+  background-color: #bea6d4;
+  border: none;
+}
+
+.upvotebtn {
+  margin-left: 12px;
+  border-radius: 4px;
+  padding-top: 4px;
+  font-family: 'Varela Round';
+  width: 90px;
+  height: 28px;
+  color: white;
+  cursor: pointer;
+  border: none;
+  background-color: #bea6d4;
+  outline: none;
+}
+
+.upvotebtn :after {
+  border: none;
+}
+
+.allcomments {
+  width: 90%;
+  position: relative;
+  background-color: white;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+.cmt {
+  display: block;
+  position: relative;
+  margin-top: 12px;
+  /* width: 90%; */
+  background-color: white;
+  color: white;
+  border-radius: 5px;
+}
+
+.cmt-content {
+  /* position: absolute;
+  float: left; */
+  width: 90%;
+  background-color: #bea6d4;
+  border-radius: 4px;
+  padding: 0px 3px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+}
+
+.cmttext {
+  padding: 8px;
+  width: 75%;
+  margin-left: 8px;
+  border: 0;
+  font-family: 'Varela Round';
+  font-size: 14px;
+  background: white;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cmtbtn {
+  width: 15%;
+  padding: 6px;
+  margin-right: 5%;
+  border: 0;
+  font-family: 'Varela Round';
+  font-size: 16px;
+  background: white;
+  float: right;
+  display: block;
+  text-align: center;
+  color: black;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cmtbtn:hover {
+  color: white;
+  background-color: #79648d;
 }
 
 .modal {

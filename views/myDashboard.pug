@@ -1,0 +1,74 @@
+doctype html
+
+include _mdMixins
+include _navbar
+
+html(lang="en" dir="ltr")
+  head
+    meta(charset="utf-8")
+    title &#x64E; #{title} | Student Forum
+    link(rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Varela+Round")
+    link(rel="stylesheet" href="/css/home_style.css")
+  body
+    h1 My Dashboard
+    ul.navbar
+      +navbar()
+    .cards
+      +top3cards("blogdiv", "6.svg", "Posts", user.numberOfPosts)
+      +top3cards("complaintdiv", "7.svg", "Complaints", user.numberOfComplaints)
+      +top3cards("", "8.svg", "Upvotes", user.numberOfUpvotes)
+
+    .maincard
+      img.maincardimg(style="float: left;" src="/img/user/female.svg")
+      .maincardcontainer
+        p.maincardpara=`${user.name.split(' ')[0]}`
+        p.maincardpara=`${user.rollNumber}`
+        p.maincardpara ABV-IIITM
+    
+    .complaintcards
+      #showeachblogcard.complaintcard
+        each post in user.posts
+          +posts("eachblogcard", post, "morebtn")
+      
+      #showcomplaintcard.complaintcard
+        each complaint in user.complaints
+          +posts("eachcompcard", complaint, "morebtnone")
+
+    - if(post)
+      - if(post.blogType == 'article')
+        #myModal.modal
+          .modal-content
+            div
+              button.closebtn
+              .eleblogcard
+                p.eleblogcardname=`${user.name.split(' ')[0]}`
+                p.eleblogcardname=`${post.title}`
+                p.eleblogcardmsg=post.text
+              div
+                h4(style="margin: 0px; color: #BEA6D4; margin-top: 4px; margin-left: 60px; font-size: 14px; font-family: Varela Round; color: black; float: left; ")=post.upvotes
+                button#upvotebtn.upvotebtn(data-postid=`${post.id}` style="float: left;") upvote
+              div
+                ul.allcomments
+                  +inputComment("cmt-content", "cmtbtn")
+                  each comment in comments
+                    +showComment("cmt-content", comment)
+
+      - if(post.blogType == 'complaint')
+        #myModal2.modal
+          .modal-content
+            button.closebtn
+            .elecompcard
+              p.elecompcardname=`${user.name.split(' ')[0]}`
+              p.elecompcardtag=`${post.title}`
+              p.elecompcardmsg=post.text
+            div
+              h4(style="margin: 0px; color: #FFB6C1; margin-top: 4px; margin-left: 60px; font-size: 14px; font-family: Varela Round; color: black; float: left; ")=post.upvotes
+              button#upvotebtn.upvotebtnone(data-postid=`${post.id}` style="float: left;") upvote
+            div
+              ul.allcomments
+                +inputComment("cmt-contentone", "cmtbtnone")
+                each comment in comments
+                  +showComment("cmt-contentone", comment)
+
+    img.homebackground(src="/img/blog/home_background.svg")
+    script(src='/js/bundle.js')
