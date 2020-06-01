@@ -213,3 +213,30 @@ slide:nth-child(3){
   background: #6a4c96;
   color: white;
 }
+
+.alert {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 60%;
+  text-align: center;
+}
+
+.alertbg {
+  width: 75%;
+  height: 42px;
+  margin-right: 50%;
+  margin-left: 50%;
+  border-radius: 36px;
+  background-color: #21033b;
+  margin-bottom: 24px;
+  line-height: 42px;
+}
+
+.alertpara {
+  font-family: sans-serif;
+  color: white;
+  vertical-align: middle;
+}

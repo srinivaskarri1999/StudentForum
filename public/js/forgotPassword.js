@@ -1,5 +1,6 @@
 /* eslint-disable */
 import axios from 'axios';
+import { showAlert } from './alert';
 
 export const forgotPassword = async (email) => {
   try {
@@ -12,12 +13,12 @@ export const forgotPassword = async (email) => {
     });
 
     if (res.data.status === 'success') {
-      alert('Mail sent successful!');
+      showAlert('Mail sent successful!');
       window.setTimeout(() => {
         location.assign('/');
       }, 1500);
     }
   } catch (err) {
-    alert(err.response.data.message);
+    showAlert(err.response.data.message);
   }
 };

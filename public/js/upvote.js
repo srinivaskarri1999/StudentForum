@@ -1,5 +1,6 @@
 /* eslint-disable */
 import axios from 'axios';
+import { showAlert } from './alert';
 
 export const upvote = async (postId) => {
   try {
@@ -15,6 +16,6 @@ export const upvote = async (postId) => {
       location.reload(true);
     }
   } catch (error) {
-    alert('You can not vote more then once!');
+    showAlert('You can not vote more then once!');
   }
 };

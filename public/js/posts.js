@@ -1,5 +1,6 @@
 /* eslint-disable */
 import axios from 'axios';
+import { showAlert } from './alert';
 
 export const createPost = async (title, text, tags, blogType, url) => {
   try {
@@ -18,6 +19,6 @@ export const createPost = async (title, text, tags, blogType, url) => {
       location.assign(`/${url}`);
     }
   } catch (err) {
-    alert('something went wrong please try again');
+    showAlert(err.response.data.message);
   }
 };

@@ -52,6 +52,7 @@ html(lang="en" dir="ltr")
                   +inputComment("cmt-content", "cmtbtn")
                   each comment in comments
                     +showComment("cmt-content", comment)
+          .alert
 
       - if(post.blogType == 'complaint')
         #myModal2.modal
@@ -69,6 +70,7 @@ html(lang="en" dir="ltr")
                 +inputComment("cmt-contentone", "cmtbtnone")
                 each comment in comments
                   +showComment("cmt-contentone", comment)
-
+          .alert
+    .alert
     img.homebackground(src="/img/blog/home_background.svg")
     script(src='/js/bundle.js')

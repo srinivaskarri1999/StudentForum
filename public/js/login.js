@@ -1,5 +1,6 @@
 /* eslint-disable */
 import axios from 'axios';
+import { showAlert } from './alert';
 
 export const login = async (email, password) => {
   try {
@@ -13,13 +14,13 @@ export const login = async (email, password) => {
     });
 
     if (res.data.status === 'success') {
-      alert('Logged in successfully!');
+      showAlert('Logged in successfully!');
       window.setTimeout(() => {
         location.assign('/');
       }, 1500);
     }
   } catch (err) {
-    alert(err.response.data.message);
+    showAlert(err.response.data.message);
   }
 };
 
@@ -29,9 +30,8 @@ export const logout = async () => {
       method: 'GET',
       url: '/api/v1/users/logout',
     });
-    if ((res.data.status = 'success')) location.reload(true);
+    if ((res.data.status = 'success')) location.assign('/');
   } catch (err) {
-    console.log(err.response);
-    alert('Error logging out! Try again.');
+    showAlert(err.response.data.message);
   }
 };

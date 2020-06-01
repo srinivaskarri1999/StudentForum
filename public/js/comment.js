@@ -1,5 +1,6 @@
 /* eslint-disable */
 import axios from 'axios';
+import { showAlert } from './alert';
 
 export const postComment = async (comment, postId) => {
   try {
@@ -15,6 +16,6 @@ export const postComment = async (comment, postId) => {
       location.reload(true);
     }
   } catch (error) {
-    alert('something went wrong please try agian!');
+    showAlert(error.response.data.message);
   }
 };

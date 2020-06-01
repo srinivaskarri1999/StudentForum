@@ -1,5 +1,6 @@
 /* eslint-disable */
 import axios from 'axios';
+import { showAlert } from './alert';
 
 export const signup = async (name, email, password, passwordConfirm) => {
   try {
@@ -15,12 +16,12 @@ export const signup = async (name, email, password, passwordConfirm) => {
     });
 
     if (res.data.status === 'success') {
-      alert('Sign up successful!');
+      showAlert('Sign up successful!');
       window.setTimeout(() => {
         location.assign('/');
       }, 1500);
     }
   } catch (err) {
-    alert(err.response.data.message);
+    showAlert(err.response.data.message);
   }
 };
