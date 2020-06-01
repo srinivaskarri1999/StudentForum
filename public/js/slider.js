@@ -5,5 +5,5 @@ export const showSlides = (slides, i) => {
   slides[i].style.display = 'block';
   setTimeout(() => {
     showSlides(slides, (i + 1) % slides.length);
-  }, 2000);
+  }, 5000);
 };
