@@ -11,11 +11,11 @@ exports.getBlog = async (req, res) => {
     res.locals.user.posts = await Blog.find({
       userId: req.user.id,
       blogType: 'article',
-    });
+    }).sort({ createdAt: -1 });
     res.locals.user.complaints = await Blog.find({
       userId: req.user.id,
       blogType: 'complaint',
-    });
+    }).sort({ createdAt: -1 });
     // console.log(res.locals.user.complaints);
     res.status(200).render('myDashboard', {
       title: 'My Dahsboard',
@@ -39,11 +39,11 @@ exports.getMyDashboard = async (req, res) => {
   res.locals.user.posts = await Blog.find({
     userId: req.user.id,
     blogType: 'article',
-  });
+  }).sort({ createdAt: -1 });
   res.locals.user.complaints = await Blog.find({
     userId: req.user.id,
     blogType: 'complaint',
-  });
+  }).sort({ createdAt: -1 });
   res.status(200).render('myDashboard', {
     title: 'My dashboard',
   });
@@ -53,11 +53,11 @@ exports.getMyPost = async (req, res) => {
   res.locals.user.posts = await Blog.find({
     userId: req.user.id,
     blogType: 'article',
-  });
+  }).sort({ createdAt: -1 });
   res.locals.user.complaints = await Blog.find({
     userId: req.user.id,
     blogType: 'complaint',
-  });
+  }).sort({ createdAt: -1 });
   res.locals.post = await Blog.findOne({ slug: req.params.postId });
   res.locals.comments = await Comment.find({ blog: res.locals.post.id });
   res.status(200).render('myDashboard', {
@@ -68,7 +68,7 @@ exports.getMyPost = async (req, res) => {
 exports.getMyBlogs = async (req, res) => {
   res.locals.posts = await Blog.find({
     blogType: 'article',
-  });
+  }).sort({ createdAt: -1 });
   res.status(200).render('blog', {
     title: 'Blog',
   });
@@ -77,7 +77,7 @@ exports.getMyBlogs = async (req, res) => {
 exports.getMyBlog = async (req, res) => {
   res.locals.posts = await Blog.find({
     blogType: 'article',
-  });
+  }).sort({ createdAt: -1 });
   res.locals.post = await Blog.findOne({ slug: req.params.postId });
   res.locals.comments = await Comment.find({ blog: res.locals.post.id });
   res.status(200).render('blog', {
@@ -88,7 +88,7 @@ exports.getMyBlog = async (req, res) => {
 exports.getComplaints = async (req, res) => {
   res.locals.posts = await Blog.find({
     blogType: 'complaint',
-  });
+  }).sort({ createdAt: -1 });
   res.status(200).render('complaint', {
     title: 'Complaints',
   });
@@ -97,7 +97,7 @@ exports.getComplaints = async (req, res) => {
 exports.getComplaint = async (req, res) => {
   res.locals.posts = await Blog.find({
     blogType: 'article',
-  });
+  }).sort({ createdAt: -1 });
   res.locals.post = await Blog.findOne({ slug: req.params.postId });
   res.locals.comments = await Comment.find({ blog: res.locals.post.id });
   res.status(200).render('complaint', {
