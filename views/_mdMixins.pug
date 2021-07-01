@@ -8,7 +8,7 @@ mixin top3cards(idname, img, title, text)
 
 mixin posts(cls, post, btncls)
   div(class=cls)
-    p.complaintcardname=`${user.name.split(' ')[0]} ${user.rollNumber}`
+    p.complaintcardname=`${user.name.split(' ')[0]}`
     p.complaintcardname(style="margin-top: 4px;")=post.title
     p.complaintcardmsg=post.text
     a(href=`/my/posts/${post.slug}`)

@@ -1,6 +1,6 @@
 mixin showPosts(post)
   .eachcompcard
-    p.complaintcardname=`${post.user.name.split(' ')[0]} ${post.user.rollNumber}`
+    p.complaintcardname=`${post.user.name.split(' ')[0]}`
     p.complaintcardmsg=`${post.title}`
     p.complaintcardmsg=`${post.text}`
     a(href=`/blog/${post.slug}`)

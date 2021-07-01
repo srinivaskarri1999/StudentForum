@@ -84,21 +84,21 @@ const userSchema = new mongoose.Schema(
 // PRE MIDDLEWARE
 userSchema.pre('save', async function (next) {
   // Only run this function if password was actually modified
-  if (this.isNew) {
-    const batch = this.email.substr(0, 3);
-    const year = this.email.substr(4, 4);
-    const no = this.email.substr(8, 3);
-    const rollno = year.concat(`-${batch}`, no);
-    this.rollNumber = rollno.toUpperCase();
-    this.slug = this.rollNumber;
-  }
-  if (!this.isModified('password')) return next();
+  // if (this.isNew) {
+  //   const batch = this.email.substr(0, 3);
+  //   const year = this.email.substr(4, 4);
+  //   const no = this.email.substr(8, 3);
+  //   const rollno = year.concat(`-${batch}`, no);
+  //   this.rollNumber = rollno.toUpperCase();
+  //   this.slug = this.rollNumber;
+  // }
+  // if (!this.isModified('password')) return next();
 
-  // Hash the password with cost of 12
-  this.password = await bcrypt.hash(this.password, 12);
+  // // Hash the password with cost of 12
+  // this.password = await bcrypt.hash(this.password, 12);
 
-  // Delete passwordConfirm field
-  this.passwordConfirm = undefined;
+  // // Delete passwordConfirm field
+  // this.passwordConfirm = undefined;
   next();
 });
 

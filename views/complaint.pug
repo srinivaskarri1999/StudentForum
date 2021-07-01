@@ -5,7 +5,7 @@ include _showPC
 
 mixin showPosts(post)
   .eachcompcard
-    p.complaintcardname=`${post.user.name.split(' ')[0]} ${post.user.rollNumber}`
+    p.complaintcardname=`${post.user.name.split(' ')[0]}`
     p.complaintcardmsg=`${post.title} ${post.tags}`
     p.complaintcardmsg=`${post.text}`
     a(href=`/complaint/${post.slug}`)
@@ -49,7 +49,7 @@ html(lang="en" dir="ltr")
         .modal-content
           span.close.closebtn &times;
           .eleblogcard
-            p.eleblogcardname=`${post.user.name.split(' ')[0]} ${post.user.rollNumber}`
+            p.eleblogcardname=`${post.user.name.split(' ')[0]}`
             p.eleblogcardname=`${post.title} ${post.tags}`
             p.eleblogcardmsg=`${post.text}`
           div
