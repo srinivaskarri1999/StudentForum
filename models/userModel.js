@@ -17,12 +17,6 @@ const userSchema = new mongoose.Schema(
       required: [true, 'Please provide your email'],
       unique: true,
       lowercase: true,
-      validate: {
-        validator: function (val) {
-          return this.email.endsWith('@iiitm.ac.in');
-        },
-        message: 'Please use College Mail id.',
-      },
     },
     slug: {
       type: String,
